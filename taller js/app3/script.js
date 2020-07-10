@@ -25,12 +25,17 @@ var productos =[
                             ];
 
 datos2.innerHTML += "<h3> Detalle de productos</h3>";
-datos2.innerHTML = datos2.innerHTML + (productos[0][0] + "<br> Cantidad: " + productos[0][1] +" kilos <br> Valor: $"+ productos[0][2] +"<br>"+ 
-    "<br>" + productos[1][0] + "<br> Cantidad: " + productos[1][1] +" kilos <br> Valor: $"+ productos[1][2] +"<br>"+ 
-    "<br>" + productos[2][0] + "<br> Cantidad: " + productos[2][1] +" kilos <br> Valor: $"+ productos[2][2] +"<br>"+ 
-    "<br>" + productos[3][0] + "<br> Cantidad: " + productos[3][1] +" kilos <br> Valor: $"+ productos[3][2] +"<br>"+ 
-    "<br>" + productos[4][0] + "<br> Cantidad: " + productos[4][1] +" kilos <br> Valor: $"+ productos[4][2] +"<br>"+ 
-    "</br>");
+
+for (var i=0; i<productos.length; i++){
+    datos2.innerHTML += ("<br>" + productos[i][0] + "<br> Cantidad: " + productos[i][1] +" kilos <br> Valor: $"+ productos[i][2] +"<br>");
+}
+
+// datos2.innerHTML = datos2.innerHTML + (productos[0][0] + "<br> Cantidad: " + productos[0][1] +" kilos <br> Valor: $"+ productos[0][2] +"<br>"+ 
+//     "<br>" + productos[1][0] + "<br> Cantidad: " + productos[1][1] +" kilos <br> Valor: $"+ productos[1][2] +"<br>"+ 
+//     "<br>" + productos[2][0] + "<br> Cantidad: " + productos[2][1] +" kilos <br> Valor: $"+ productos[2][2] +"<br>"+ 
+//     "<br>" + productos[3][0] + "<br> Cantidad: " + productos[3][1] +" kilos <br> Valor: $"+ productos[3][2] +"<br>"+ 
+//     "<br>" + productos[4][0] + "<br> Cantidad: " + productos[4][1] +" kilos <br> Valor: $"+ productos[4][2] +"<br>"+ 
+//     "</br>");
 // console.log(productos[0][2]);
 
 // otra forma de for 
@@ -51,7 +56,7 @@ for (var i=0; i<productos.length; i++){
 //             productos[4][2] ;
 
 if (subtotal>=20) {
-    datos3.innerHTML=`Su monto (${subtotal}) es mayor a $20`;
+    datos3.innerHTML=`<br> Su monto (${subtotal}) es mayor a $20`;
     descuento =0.10;
 } else {
     datos3.innerHTML="Su monto es menor a $19 ";
