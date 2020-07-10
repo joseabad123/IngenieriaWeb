@@ -40,11 +40,15 @@ datos2.innerHTML = datos2.innerHTML + (productos[0][0] + "<br> Cantidad: " + pro
 
 //Cálculo de valores
 
-subtotal =  productos[0][2] +
-            productos[1][2] +
-            productos[2][2] +
-            productos[3][2] +
-            productos[4][2] ;
+for (var i=0; i<productos.length; i++){
+    subtotal = subtotal + productos[i][2];
+}
+
+// subtotal =  productos[0][2] +
+//             productos[1][2] +
+//             productos[2][2] +
+//             productos[3][2] +
+//             productos[4][2] ;
 
 if (subtotal>=20) {
     datos3.innerHTML=`Su monto (${subtotal}) es mayor a $20`;
